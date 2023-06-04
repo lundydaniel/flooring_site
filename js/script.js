@@ -11,7 +11,7 @@ document.getElementById("submit").onclick = function () {
     // Pricing variables
     const pricePerFt = 2.5;
     const qtRound = 1.5;
-    const baseboard = 1;
+    const baseboard = 1.0;
 
 
     // get user input for length and width
@@ -21,8 +21,16 @@ document.getElementById("submit").onclick = function () {
     // calculate user length and width
     const calcSqFt = length * width;
 
-    console.log(calcSqFt * pricePerFt);
-    console.log(calcSqFt * (pricePerFt + qtRound));
-    console.log(calcSqFt * (pricePerFt + baseboard));
-    console.log(calcSqFt * (pricePerFt + qtRound + baseboard));
+    // display data to user
+    document.getElementById("sqft").innerHTML = parseFloat(Math.round((calcSqFt + Number.EPSILON) * 100) / 100).toFixed(2);
+    document.getElementById("pricePerSqft").innerHTML = parseFloat(calcSqFt * pricePerFt).toFixed(2);
+    document.getElementById("priceQt").innerHTML = parseFloat(calcSqFt * (pricePerFt + qtRound)).toFixed(2);
+    document.getElementById("priceBase").innerHTML = parseFloat(calcSqFt * (pricePerFt + baseboard)).toFixed(2);
+    document.getElementById("priceBoth").innerHTML = parseFloat(calcSqFt * (pricePerFt + qtRound + baseboard)).toFixed(2);
+
+    console.log(calcSqFt);
+    // console.log(calcSqFt * pricePerFt);
+    // console.log(calcSqFt * (pricePerFt + qtRound));
+    // console.log(calcSqFt * (pricePerFt + baseboard));
+    // console.log(calcSqFt * (pricePerFt + qtRound + baseboard));
 }

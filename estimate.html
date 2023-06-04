@@ -43,19 +43,61 @@
             </div>
         </div>
     </nav>
-    <!--* Find form on bootstrap for user quote  -->
     <div class="container-fluid">
         <div class="row">
-            <div class="col">
+            <div class="col-6">
                 <label for="UserLengthInput" class="form-label">Length in feet</label>
                 <input id="user-length" type="text" class="form-control" placeholder="Length" aria-label="Length">
             </div>
-            <div class="col">
+            <div class="col-6">
                 <label for="UserWidthInput" class="form-label">Width in feet</label>
                 <input id="user-width" type="text" class="form-control" placeholder="Width" aria-label="Width">
             </div>
+            <div class="col-6">
+                <label for="sqFt" class="form-label">Your square footage</label>
+                <div class="input-group mb-3">
+                    <span id="sqft" class="input-group-text">0</span>
+                </div>
+            </div>
             <div class="col-12">
-                <button id="submit" class="btn btn-primary" type="submit">Submit form</button>
+                <button id="submit" class="btn btn-primary" type="submit">Get Estimate</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid results">
+        <div class="row">
+            <div class="col-6">
+                <label for="pricePerSqft" class="form-label">Price per square foot *</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <span id="pricePerSqft" class="input-group-text">0.00</span>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="priceQt" class="form-label">Price per square foot /w 1/4 round *</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <span id="priceQt" class="input-group-text">0.00</span>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="priceBase" class="form-label">Price per square foot /w baseboard *</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <span id="priceBase" class="input-group-text">0.00</span>
+                </div>
+            </div>
+            <div class="col-6">
+                <label for="priceBoth" class="form-label">Price per square foot /w baseboard and 1/4 round *</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <span id="priceBoth" class="input-group-text">0.00</span>
+                </div>
+            </div>
+            <div class="col-12">
+                <p class="fine-print">** Prices Subject To Change. Prices are estimates that are subject to change upon
+                    professional estimate.</p>
             </div>
         </div>
     </div>
